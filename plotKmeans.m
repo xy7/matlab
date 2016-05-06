@@ -30,6 +30,14 @@ end
 
 legend(str2mat(num2str(lc)));
 
+figure('name', 'cluster silh');
+[silh3,h] = silhouette(X,idx);
+mean(silh3)
+%silh3
+set(get(gca,'Children'),'FaceColor',[.8 .8 1])
+xlabel('Silhouette Value')
+ylabel('Cluster')
+
 hold off;
 
 
